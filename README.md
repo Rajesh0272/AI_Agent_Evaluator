@@ -228,6 +228,4 @@ If you attempt this extension:
 - Explain how the logic distinguishes an omitted qualifier (`partial`) from an absent claim (`missing`) and an opposing claim (`contradicted`).
 
 The optional extension should not reduce the quality of the required solution.
-=======
-# AI_Agent_Evaluator
->>>>>>> origin/main
+
