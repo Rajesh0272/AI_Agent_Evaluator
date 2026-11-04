@@ -1,7 +1,3 @@
-"""
-Top-level entrypoint for `python -m evaluator`.
-"""
-
 import sys
 from pathlib import Path
 

@@ -1,13 +1,3 @@
-"""
-Command Line Interface (CLI) for the AI Agent Response Evaluator.
-
-Supports subcommands:
-- validate: Load, verify, and summarize benchmark data integrity
-- run: Execute evaluation on a specific split and output predictions
-- report: Compare predictions with ground truth labels and generate metrics report
-- extension: Run optional claim verification on judge framework datasets
-"""
-
 import sys
 import json
 import argparse

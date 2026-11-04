@@ -1,7 +1,3 @@
-"""
-Tests for evaluator engines, safety gates, escalation detection, and batch processing.
-"""
-
 import pytest
 from src.evaluator.schemas import NormalizedCase, EvaluationResult
 from src.evaluator.engine.rule_evaluator import RuleEvaluator

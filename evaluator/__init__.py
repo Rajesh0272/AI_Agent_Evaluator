@@ -1,7 +1,3 @@
-"""
-Top-level forwarder for the evaluator package to allow `python -m evaluator`.
-"""
-
 import sys
 from pathlib import Path
 

@@ -1,7 +1,3 @@
-"""
-End-to-end integration tests for evaluator CLI commands (validate, run, report).
-"""
-
 import json
 from pathlib import Path
 from src.evaluator.cli import build_parser, cmd_validate, cmd_run, cmd_report

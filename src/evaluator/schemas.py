@@ -1,10 +1,3 @@
-"""
-Pydantic data models and schemas for the AI Agent Response Evaluator.
-
-Defines strict type contracts for input CSV rows, normalized evaluation cases,
-evaluation predictions, and ground-truth labels.
-"""
-
 from typing import Literal, Optional, List, Dict, Any, Union
 from pydantic import BaseModel, Field, field_validator, model_validator
 

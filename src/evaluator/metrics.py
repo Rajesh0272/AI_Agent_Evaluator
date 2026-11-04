@@ -1,15 +1,3 @@
-"""
-Metrics calculation module for the AI Agent Response Evaluator.
-
-Calculates:
-- Verdict Accuracy
-- Multiclass Macro F1 score across PASS, FAIL, ESCALATE
-- 3x3 Confusion Matrix
-- Precision and Recall for binary policy_violation
-- Mean Absolute Error (MAE) for quality_score
-- Identification of error cases with full discrepancy detail
-"""
-
 from typing import List, Dict, Any, Tuple
 from dataclasses import dataclass, field
 
@@ -36,16 +24,6 @@ def calculate_metrics(
     predictions: List[Dict[str, Any]],
     gold_labels: Dict[str, Any],
 ) -> ReportMetrics:
-    """
-    Computes all benchmark metrics comparing predictions against gold ground-truth labels.
-
-    Args:
-        predictions: List of dicts matching EvaluationResult schema.
-        gold_labels: Dict mapping case_id to GoldLabel objects.
-
-    Returns:
-        ReportMetrics instance with all calculated statistics.
-    """
     labels = ["PASS", "FAIL", "ESCALATE"]
     total = len(predictions)
     if total == 0:

@@ -1,7 +1,3 @@
-"""
-Unit tests for evaluation metrics calculations (accuracy, Macro F1, confusion matrix, MAE, PR).
-"""
-
 from src.evaluator.schemas import GoldLabel
 from src.evaluator.metrics import calculate_metrics
 

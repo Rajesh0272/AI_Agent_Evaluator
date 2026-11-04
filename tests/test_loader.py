@@ -1,7 +1,3 @@
-"""
-Tests for benchmark data loader, JSON normalization, and schema validation.
-"""
-
 import json
 import pytest
 from pathlib import Path

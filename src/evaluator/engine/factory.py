@@ -1,7 +1,3 @@
-"""
-Factory for creating evaluator instances.
-"""
-
 from typing import Optional
 from src.evaluator.engine.base import BaseEvaluator
 from src.evaluator.engine.rule_evaluator import RuleEvaluator

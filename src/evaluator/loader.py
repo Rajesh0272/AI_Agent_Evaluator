@@ -1,14 +1,3 @@
-"""
-Data loader and validator for the AI Agent Response Evaluator.
-
-Responsible for:
-- Reading CSV data reliably while preserving quoted strings and JSON formatting.
-- Validating case_id presence and uniqueness.
-- Unpacking agent_trajectory and agent_final_answer from state_json when top-level columns are empty.
-- Validating allowed gold label values.
-- Emitting normalized cases stripped of labels to prevent evaluator leakage.
-"""
-
 import json
 from pathlib import Path
 from typing import List, Dict, Tuple, Optional, Any

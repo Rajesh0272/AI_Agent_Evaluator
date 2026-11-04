@@ -1,11 +1,3 @@
-"""
-LLM-as-a-Judge Evaluator.
-
-Allows using an external LLM (OpenAI, Anthropic, or compatible API) as an evaluator.
-All API credentials and model names are strictly read from application settings / .env.
-If no API key is provided, gracefully raises an informative error or delegates to fallback.
-"""
-
 import json
 from typing import Optional
 import httpx
@@ -28,9 +20,6 @@ Do NOT include any markdown or text outside the JSON object."""
 
 
 class LLMEvaluator(BaseEvaluator):
-    """
-    Evaluates agent cases using an external LLM provider.
-    """
 
     def __init__(self, api_key: Optional[str] = None, model: Optional[str] = None):
         cfg = get_settings()
@@ -38,9 +27,6 @@ class LLMEvaluator(BaseEvaluator):
         self.model = model or cfg.openai_model or "gpt-4o-mini"
 
     def evaluate(self, case: NormalizedCase) -> EvaluationResult:
-        """
-        Evaluate case using LLM API. Raises RuntimeError if API key is not configured.
-        """
         if not self.api_key:
             raise RuntimeError(
                 "LLM Evaluator requires OPENAI_API_KEY or EXTERNAL_API_KEY set in .env or environment."

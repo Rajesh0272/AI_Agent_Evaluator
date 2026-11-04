@@ -1,12 +1,3 @@
-"""
-Hybrid Evaluator combining deterministic safety guardrails with semantic evaluation.
-
-Workflow:
-1. Fast local deterministic safety gate (catches 100% of hard authority/policy breaches).
-2. If safe, delegates to LLM Evaluator when credentials are configured in .env.
-3. If LLM credentials are not configured, seamlessly falls back to the local Rule Evaluator.
-"""
-
 import logging
 from src.evaluator.schemas import NormalizedCase, EvaluationResult
 from src.evaluator.engine.base import BaseEvaluator

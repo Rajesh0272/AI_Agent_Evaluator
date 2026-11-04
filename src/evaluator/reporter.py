@@ -1,26 +1,11 @@
-"""
-Evaluation Report Generator.
-
-Formats benchmark metrics into a structured, executive Markdown report
-including record counts, accuracy, macro F1, confusion matrix, policy metrics,
-and deep error analysis on failure cases.
-"""
-
 from pathlib import Path
 from typing import Optional
 from src.evaluator.metrics import ReportMetrics
 
 
 class EvaluationReporter:
-    """
-    Renders evaluation metrics into clean Markdown and JSON reports.
-    """
-
     @staticmethod
     def generate_markdown_report(metrics: ReportMetrics, split_name: str = "test") -> str:
-        """
-        Generate a comprehensive GitHub-flavored Markdown evaluation report.
-        """
         lines = []
         lines.append(f"# AI Agent Evaluator Benchmark Report ({split_name.upper()} Split)")
         lines.append("")

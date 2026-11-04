@@ -1,19 +1,8 @@
-"""
-Configuration and settings module for the AI Agent Response Evaluator.
-
-All configuration options and secrets (API keys, OpenSearch IDs, etc.) are loaded
-from environment variables or an optional local .env file.
-No sensitive credentials or environment-specific values are hardcoded in the codebase.
-"""
-
 from typing import Optional, Literal
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    """
-    Application settings loaded from environment variables and .env file.
-    """
 
     model_config = SettingsConfigDict(
         env_file=".env",
